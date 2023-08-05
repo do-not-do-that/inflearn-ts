@@ -13,4 +13,4 @@ function printName(params: IMan) {
   console.log(params?.name);
 }
 
-printName(undefined);
+// printName(undefined);
