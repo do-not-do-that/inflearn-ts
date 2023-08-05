@@ -40,4 +40,4 @@ arr6.forEach((e) => { var _a; return console.log((_a = e === null || e === void 
 const arr7 = [1, "hi", {}, []];
 console.log("🚀 ~ file: arr.ts:52 ~ arr7:", arr7);
 arr7.push("test");
-console.log("🚀 ~ file: arr.ts:54 ~ arr7:", arr7);
+console.log("🚀 ~ file: arr.ts:54 ~ arr7:", arr7); // [ 1, 'hi', {}, [], 'test' ] 로, 튜플은 논리적인 자료구조 임을 확인할 수 있음. (실제 런타임에서 보장 x)
