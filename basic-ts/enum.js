@@ -1,5 +1,6 @@
 "use strict";
 // 성별, 부서코드, 카테고리, ..etc
+// enum은 컴파일 시 function 으로 구현된다. js 에서는 enum 이 없기 때문이다.
 var categoryEnum;
 (function (categoryEnum) {
     categoryEnum["H"] = "H";
@@ -26,3 +27,12 @@ function cate(category) {
     }
 }
 cate(category);
+// 리터럴 타입
+var sexEnum;
+(function (sexEnum) {
+    sexEnum["MALE"] = "MALE";
+    sexEnum["FEMALE"] = "FEMALE";
+    sexEnum["ETC"] = "ETC";
+})(sexEnum || (sexEnum = {}));
+const sex = "MALE";
+const sex2 = sexEnum.ETC;
