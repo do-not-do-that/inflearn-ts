@@ -6,10 +6,10 @@ interface IExam {
   value: number;
 }
 
-const example: object = { value: 1 };
-// console.log(example.value);
+const example: object = { value: 1 } as IExam;
+console.log(example);
 
 // 1. as (추천!)
 console.log((example as IExam).value);
 // 2 <>
-console.log(<IExam>example);
+console.log((<IExam>example).value);
