@@ -1,3 +1,5 @@
+import { Builder } from "./deco";
+
 export class UserEntity {
   name?: string;
   age?: number;
@@ -42,4 +44,30 @@ export class UserEntity {
       return new UserEntity(this._name, this._age, this._marketing);
     }
   };
+}
+
+class BuilderInit {
+  static Builder = class {
+    build() {}
+
+    [props: string]: Function;
+  };
+}
+
+@Builder
+export class PostEntity extends BuilderInit {
+  constructor(
+    public title: string,
+    public content: string,
+    public author: string
+  ) {
+    super();
+  }
+}
+
+@Builder
+export class TimeEntity extends BuilderInit {
+  constructor(public hi: string) {
+    super();
+  }
 }
